@@ -1,0 +1,63 @@
+@import '../utilities/variables';
+
+
+/* 
+================================================
+Typography Styles: font-family, size, weight
+================================================
+ */
+
+/* --------------------
+Typography styles: *
+ --------------------*/
+
+* {
+    font-family: 'Lato', sans-serif;
+    color: $primary-font-color;
+    box-sizing: border-box;
+  }
+
+
+
+/* --------------------
+ Typography styles: a
+ --------------------*/
+
+a {
+    text-decoration: none;
+  }
+
+  .link {
+    color: $secondary-color;
+    font-weight: 700;
+  }
+
+
+/* --------------------
+ Typography styles: h1
+ --------------------*/
+
+
+
+/* ----------------------
+ Typography styles: body
+ ----------------------*/
+
+.headline-secondary {
+    font-weight: 300;
+    color: $primary-font-color;
+  }
+
+p {
+    line-height: 1.45em;
+  }
+
+  .blockquote {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $primary-color;
+    border-radius: 5px;
+  }
