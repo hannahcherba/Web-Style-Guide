@@ -43,6 +43,11 @@ a {
  Typography styles: body
  ----------------------*/
 
+ .headline-primary {
+  color: $primary-color;
+  margin-left: 10px;
+}
+
 .headline-secondary {
     font-weight: 300;
     color: $primary-font-color;

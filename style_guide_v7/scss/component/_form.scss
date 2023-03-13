@@ -9,7 +9,7 @@
   }
   
   .input{
-    display: $img-display;
+    display: block;
     width: 94%;
     margin: $main-size auto 0;
     border: none;
@@ -20,7 +20,7 @@
   .hidden {
     position:absolute;
     left:-10000px;
-    top:$margin-auto;
+    top: auto;
     width:1px;
     height:1px;
     overflow:hidden;

@@ -1,3 +1,6 @@
+@import '../utilities/variables';
+
+
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
@@ -24,4 +27,20 @@
             color: #fff;
             background-color: $primary-color;
         }
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+@media (min-width: $media-break-pt) {
+    .nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        .nav-link {
+        flex-basis: 100px;
+        }
+    }
 }
