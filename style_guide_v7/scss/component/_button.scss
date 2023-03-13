@@ -1,4 +1,5 @@
-@import '../utilities/variables';
+@import  '../utilities/mixins',
+          '../utilities/variables';
 
 
 /* ============================================= */
@@ -14,24 +15,64 @@
     text-transform: uppercase;
     border-radius: 5px;
   }
+  @each $theme, $colors in $transition {
+    .btn-#{theme} {
+        color: $colors;
+    }
+}
+
+  // .default {
+  //   background-color: $secondary-color;
+
+  //     &:hover {
+  //       @include light-transition($secondary-color-lighten);
+  //     }
+  // }
   
-  .default {
-    background-color: $secondary-color;
-  }
+  // .error {
+  //   background-color: $color-error;
+
+  //   &:hover {
+  //     @include light-transition($color-error-light);
+  //   }
+  // }
   
-  .error {
-    background-color: $color-error;
-  }
+  // .info {
+  //   background-color: $accent-lght;
+
+  //   &:hover {
+  //     @include light-transition($accent-lght-light);
+  //   }
+  // }
   
-  .info {
-    background-color: $accent-lght;
-  }
+  // .success {
+  //   background-color: $color-success;
+
+  //   &:hover {
+  //     @include light-transition($color-success-light);
+  //   }
+  // }
   
-  .success {
-    background-color: $color-success;
-  }
+  // .warning {
+  //   background-color: $color-warning;
+
+  //   &:hover {
+  //     @include light-transition($color-warning-light);
+  //   }
+  // }
   
-  .warning {
-    background-color: $color-warning;
-  }
   
+  
+  /* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+  @media (min-width: $media-break-pt) {
+    .btn {
+      padding: $main-size 30px;
+    }
+    
+    .btn + .btn {
+      margin-left: $main-size;
+    }
+}

@@ -12,6 +12,13 @@ $color-error:  #e4757a;
 $color-success:  #63cc82;
 $primary-font-color:  #777;
 
+$secondary-color-lighten: lighten($secondary-color, 15%);
+$color-error-light: lighten($color-error, 15%);
+$accent-lght-light: lighten($accent-lght, 15%);
+$color-success-light: lighten($color-success, 15%);
+$color-warning-light: lighten($color-warning, 15%);
+
+
 // ------------------------
 // variable sizes
 // ------------------------

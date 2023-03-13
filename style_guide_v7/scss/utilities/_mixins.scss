@@ -1,1 +1,46 @@
 @import '../utilities/variables';
+
+@mixin flexy($disp: flex, $dir: null, $wrap:null, $just:null, $align: null, $bas:null) {
+	display: $disp;
+	flex-direction: $dir;
+	flex-wrap:$wrap;
+	justify-content: $just;
+    align-items: $align;
+    flex-basis: $bas;
+}
+
+@mixin blocky($disp: block, $margl: auto, $margr: auto, $margt: null, 
+$maxw: null) {
+
+	display: $disp;
+	margin-left: $margl;
+	margin-right: $margr;
+	margin-top: $margt;
+    max-width: $maxw; 
+}
+
+@mixin light-transition($lighten, $trans:background-color) {
+    
+    background-color: $lighten;
+    color: complement($lighten);
+    transition: 
+        background-color .2s ease-in-out, 
+            color .2s ease-in-out; 
+
+}
+
+//buttons transition color map
+
+$transition: (
+    'default': $secondary-color,
+    'error': $color-error,
+    'info': $accent-lght,
+    'success': $color-success,
+    'warning':  $color-warning
+);
+
+// @each $theme, $colors in $transition {
+//     .btn-#{theme} {
+//         color: $color;
+//     }
+// }

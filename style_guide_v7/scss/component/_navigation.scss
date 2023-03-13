@@ -6,10 +6,8 @@
 /* ============================================= */
 
 .nav {
+    @include flexy($dir: column, $bas:$percent-size);
     padding-left: 0;
-    flex-basis: $percent-size;
-    display: flex;
-    flex-direction: column;
   
   
         &-link {
@@ -35,9 +33,7 @@
 
 @media (min-width: $media-break-pt) {
     .nav {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+        @include flexy($dir: row, $just:flex-end, $align:center);
 
         .nav-link {
         flex-basis: 100px;

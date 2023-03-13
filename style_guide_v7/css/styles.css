@@ -172,7 +172,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -255,7 +255,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
@@ -401,26 +401,37 @@ p {
   border-radius: 5px;
 }
 
-.default {
-  background-color: #51ddfc;
+.btn-theme {
+  color: #51ddfc;
 }
 
-.error {
-  background-color: #e4757a;
+.btn-theme {
+  color: #e4757a;
 }
 
-.info {
-  background-color: #deb2ee;
+.btn-theme {
+  color: #deb2ee;
 }
 
-.success {
-  background-color: #63cc82;
+.btn-theme {
+  color: #63cc82;
 }
 
-.warning {
-  background-color: #fd7856;
+.btn-theme {
+  color: #fd7856;
 }
 
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: 768px) {
+  .btn {
+    padding: 10px 30px;
+  }
+  .btn + .btn {
+    margin-left: 10px;
+  }
+}
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
@@ -429,6 +440,8 @@ p {
 }
 
 .row {
+  display: flex;
+  flex-direction: column;
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
@@ -459,11 +472,11 @@ Resources
 }
 
 .theme.col-4 {
-  background-color: #7ee6fd;
+  background-color: #51ddfc;
 }
 
 .theme.col-5 {
-  background-color: #88d9a0;
+  background-color: #63cc82;
 }
 
 .theme.col-6 {
@@ -491,7 +504,7 @@ Resources
 }
 
 .theme.col-12 {
-  background-color: #80e8d1;
+  background-color: #58e1c1;
 }
 
 .card {
@@ -499,42 +512,14 @@ Resources
 }
 
 /* ============================================= */
-/*              Images                           */
-/* ============================================= */
-.img-avatar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.img-frame {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  max-width: 100%;
-  padding: 13px;
-  border: 1px solid #ccc;
-}
-
-.img-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
   .container {
-    max-width: 1400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1400px;
   }
   .centered {
     display: block;
@@ -547,8 +532,8 @@ Resources
   [class^=col] {
     display: flex;
     justify-content: center;
-    margin-top: 0;
     align-items: center;
+    margin-top: 0;
   }
   [class^=col] + [class^=col] {
     margin-left: 10px;
@@ -589,25 +574,47 @@ Resources
   .col-12 {
     flex-basis: 100%;
   }
-  .btn {
-    padding: 10px 30px;
-  }
-  .btn + .btn {
-    margin-left: 10px;
-  }
   .logo {
     margin-left: initial;
     margin-right: initial;
   }
 }
 /* ============================================= */
+/*              Images                           */
+/* ============================================= */
+.img-avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img-frame {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+}
+
+.img-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
 .nav {
-  padding-left: 0;
-  flex-basis: 100%;
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
+  padding-left: 0;
 }
 .nav-link {
   text-align: center;
@@ -627,6 +634,7 @@ Resources
 /* ============================================= */
 @media (min-width: 768px) {
   .nav {
+    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;

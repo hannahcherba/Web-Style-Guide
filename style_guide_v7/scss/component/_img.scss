@@ -1,0 +1,22 @@
+@import '../utilities/variables',
+        '../utilities/mixins';
+        
+        
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+.img-avatar {
+    @include blocky($margt: $main-size, $maxw: $percent-size);
+     max-height: $percent-size;
+   }
+   
+   .img-frame {
+     @include blocky($margt: $main-size, $maxw: $percent-size);
+     padding: 13px;
+     border: 1px solid #ccc;
+   }
+   
+   .img-logo {
+     @include blocky;
+   }
