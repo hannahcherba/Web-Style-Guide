@@ -6,22 +6,24 @@
 
 .form {
     flex-basis: $percent-size;
+
+    .input{
+      display: block;
+      width: 94%;
+      margin: $main-size auto 0;
+      border: none;
+      padding: $main-size;
+      border-bottom: 5px solid $primary-color;
+    }
+    
+    .hidden {
+      position:absolute;
+      left:-10000px;
+      top: auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
   }
   
-  .input{
-    display: block;
-    width: 94%;
-    margin: $main-size auto 0;
-    border: none;
-    padding: $main-size;
-    border-bottom: 5px solid $primary-color;
-  }
   
-  .hidden {
-    position:absolute;
-    left:-10000px;
-    top: auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-  }

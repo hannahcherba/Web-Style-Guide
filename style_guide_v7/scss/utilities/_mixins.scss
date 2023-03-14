@@ -29,7 +29,8 @@ $maxw: null) {
 
 }
 
-//buttons transition color map
+//buttons transition color maps
+//===================================
 
 $transition: (
     'default': $secondary-color,
@@ -39,8 +40,40 @@ $transition: (
     'warning':  $color-warning
 );
 
-// @each $theme, $colors in $transition {
-//     .btn-#{theme} {
-//         color: $color;
-//     }
-// }
+$on-hover: (
+    'default': $secondary-color-lighten,
+    'error': $color-error-light,
+    'info': $accent-lght-light,
+    'success': $color-success-light,
+    'warning':  $color-warning-light
+);
+
+$column-colors: (
+    'col-1':  #927bc1,
+    'col-2': $color-warning,
+    'col-3': $accent-lght,
+    'col-4': $secondary-color,
+    'col-5': $color-success,
+    'col-6': $accent-dk,
+    'col-7': $accent-medium,
+    'col-8': #fd9f85,
+    'col-9': $color-error,
+    'col-10': $color-success,
+    'col-11': $secondary-color,
+    'col-12': $primary-color
+);
+
+$col-flex: (
+    'col-1': 8.33%,
+    'col-2': 16.67%,
+    'col-3': 25.00%,
+    'col-4': 33.33%,
+    'col-5': 41.67%,
+    'col-6': 50.00%,
+    'col-7': 58.33%,
+    'col-8': 66.67%,
+    'col-9': 75.00%,
+    'col-10': 83.33%,
+    'col-11': 91.67%,
+    'col-12': $percent-size
+);

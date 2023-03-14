@@ -27,7 +27,7 @@ a {
     text-decoration: none;
   }
 
-  .link {
+.link {
     color: $secondary-color;
     font-weight: 700;
   }
@@ -42,8 +42,8 @@ a {
 /* ----------------------
  Typography styles: body
  ----------------------*/
-
- .headline-primary {
+ 
+.headline-primary {
   color: $primary-color;
   margin-left: 10px;
 }
@@ -57,7 +57,7 @@ p {
     line-height: 1.45em;
   }
 
-  .blockquote {
+.blockquote {
     font-size: 1.5em;
     font-weight: 300;
     font-style: italic;

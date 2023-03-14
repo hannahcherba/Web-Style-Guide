@@ -16,51 +16,30 @@
     border-radius: 5px;
   }
   @each $theme, $colors in $transition {
-    .btn-#{theme} {
-        color: $colors;
+    .#{$theme} {
+        background-color: #{$colors};
     }
-}
+  }
 
-  // .default {
-  //   background-color: $secondary-color;
+.default:hover {
+        @include light-transition($secondary-color-lighten);
+    }
 
-  //     &:hover {
-  //       @include light-transition($secondary-color-lighten);
-  //     }
-  // }
+.error:hover {
+      @include light-transition($color-error-light);
+    }
   
-  // .error {
-  //   background-color: $color-error;
-
-  //   &:hover {
-  //     @include light-transition($color-error-light);
-  //   }
-  // }
+.info:hover {
+      @include light-transition($accent-lght-light);
+    }
   
-  // .info {
-  //   background-color: $accent-lght;
-
-  //   &:hover {
-  //     @include light-transition($accent-lght-light);
-  //   }
-  // }
+.success:hover {
+      @include light-transition($color-success-light);
+    }
   
-  // .success {
-  //   background-color: $color-success;
-
-  //   &:hover {
-  //     @include light-transition($color-success-light);
-  //   }
-  // }
-  
-  // .warning {
-  //   background-color: $color-warning;
-
-  //   &:hover {
-  //     @include light-transition($color-warning-light);
-  //   }
-  // }
-  
+.warning:hover {
+      @include light-transition($color-warning-light);
+    }
   
   
   /* ============================================= */

@@ -369,8 +369,7 @@ p {
 .form {
   flex-basis: 100%;
 }
-
-.input {
+.form .input {
   display: block;
   width: 94%;
   margin: 10px auto 0;
@@ -378,8 +377,7 @@ p {
   padding: 10px;
   border-bottom: 5px solid #58e1c1;
 }
-
-.hidden {
+.form .hidden {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -401,24 +399,54 @@ p {
   border-radius: 5px;
 }
 
-.btn-theme {
-  color: #51ddfc;
+.default {
+  background-color: #51ddfc;
 }
 
-.btn-theme {
-  color: #e4757a;
+.error {
+  background-color: #e4757a;
 }
 
-.btn-theme {
-  color: #deb2ee;
+.info {
+  background-color: #deb2ee;
 }
 
-.btn-theme {
-  color: #63cc82;
+.success {
+  background-color: #63cc82;
 }
 
-.btn-theme {
-  color: #fd7856;
+.warning {
+  background-color: #fd7856;
+}
+
+.default:hover {
+  background-color: #9cecfd;
+  color: #fdae9c;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.error:hover {
+  background-color: #f1b5b8;
+  color: #b5f1ee;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.info:hover {
+  background-color: #f9f1fc;
+  color: #f4fcf1;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.success:hover {
+  background-color: #9ddfb0;
+  color: #df9dcb;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.warning:hover {
+  background-color: #feb4a2;
+  color: #a2ebfe;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 /* ============================================= */
@@ -455,10 +483,6 @@ p {
   border-radius: 5px;
 }
 
-/* https://teamtreehouse.com/library/sass-basics-2/loop-through-lists-with-each
-https://teamtreehouse.com/library/sass-basics-2/loop-through-data-in-a-map-with-each
-Resources
-@each ? */
 .theme.col-1 {
   background-color: #927bc1;
 }

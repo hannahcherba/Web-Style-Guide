@@ -9,14 +9,15 @@
 .img-avatar {
     @include blocky($margt: $main-size, $maxw: $percent-size);
      max-height: $percent-size;
-   }
-   
-   .img-frame {
+}
+ 
+.img-frame {
      @include blocky($margt: $main-size, $maxw: $percent-size);
      padding: 13px;
      border: 1px solid #ccc;
    }
-   
-   .img-logo {
+
+.img-logo {
      @include blocky;
    }
+  
